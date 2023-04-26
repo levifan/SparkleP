@@ -445,6 +445,8 @@
 		72F9EC451D5E9ED8004AC8B6 /* SPUDownloadData.m in Sources */ = {isa = PBXBuildFile; fileRef = 72F9EC431D5E9ED8004AC8B6 /* SPUDownloadData.m */; };
 		72F9EC481D5EA904004AC8B6 /* SPUUpdaterDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 72F9EC471D5EA7D3004AC8B6 /* SPUUpdaterDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C23E885B1BE7B24F0050BB73 /* SparkleTestCodeSignApp.enc.dmg in Resources */ = {isa = PBXBuildFile; fileRef = C23E88591BE7AF890050BB73 /* SparkleTestCodeSignApp.enc.dmg */; };
+		C82AA8D229F9CDC000989E7B /* SessionConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = C82AA8D029F9CDC000989E7B /* SessionConfig.h */; };
+		C82AA8D329F9CDC000989E7B /* SessionConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = C82AA8D129F9CDC000989E7B /* SessionConfig.m */; };
 		EA1E281722B645AE004AA304 /* libbsdiff.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA1E280F22B64522004AA304 /* libbsdiff.a */; };
 		EA1E281822B645CE004AA304 /* libbsdiff.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA1E280F22B64522004AA304 /* libbsdiff.a */; };
 		EA1E281922B645D9004AA304 /* libbsdiff.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA1E280F22B64522004AA304 /* libbsdiff.a */; };
@@ -1442,6 +1444,8 @@
 		A5BF4F1B1BC7668B007A052A /* SUTestWebServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SUTestWebServer.h; sourceTree = "<group>"; };
 		A5BF4F1C1BC7668B007A052A /* SUTestWebServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SUTestWebServer.m; sourceTree = "<group>"; };
 		C23E88591BE7AF890050BB73 /* SparkleTestCodeSignApp.enc.dmg */ = {isa = PBXFileReference; lastKnownFileType = file; path = SparkleTestCodeSignApp.enc.dmg; sourceTree = "<group>"; };
+		C82AA8D029F9CDC000989E7B /* SessionConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SessionConfig.h; sourceTree = "<group>"; };
+		C82AA8D129F9CDC000989E7B /* SessionConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SessionConfig.m; sourceTree = "<group>"; };
 		EA1E280F22B64522004AA304 /* libbsdiff.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libbsdiff.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA1E281422B64548004AA304 /* bsdiff-Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "bsdiff-Debug.xcconfig"; sourceTree = "<group>"; };
 		EA1E281522B64549004AA304 /* bsdiff-Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "bsdiff-Release.xcconfig"; sourceTree = "<group>"; };
@@ -1822,6 +1826,7 @@
 		1495006D195FBBBD00BC5B5B /* Sparkle */ = {
 			isa = PBXGroup;
 			children = (
+				C82AA8CF29F9CD8E00989E7B /* Network */,
 				720767D11E2EB86200F9A850 /* AppKitPrevention.h */,
 				61299B3909CB055000B7442F /* Appcast Support */,
 				55C14BD5136EEFD000649790 /* Autoupdate */,
@@ -2386,6 +2391,15 @@
 			name = Deprecated;
 			sourceTree = "<group>";
 		};
+		C82AA8CF29F9CD8E00989E7B /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				C82AA8D029F9CDC000989E7B /* SessionConfig.h */,
+				C82AA8D129F9CDC000989E7B /* SessionConfig.m */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		EA1E283322B660ED004AA304 /* ed25519 */ = {
 			isa = PBXGroup;
 			children = (
@@ -2542,6 +2556,7 @@
 				729F7EAF273F1840004592DC /* SPUUserAgent+Private.h in Headers */,
 				72EE17FC26D1CC9D00C58B19 /* SPUInstallationType.h in Headers */,
 				72EF30BE2675CF38008CE987 /* SPUAppcastItemStateResolver.h in Headers */,
+				C82AA8D229F9CDC000989E7B /* SessionConfig.h in Headers */,
 				72EF30C7267C716A008CE987 /* SUAppcastItem+Private.h in Headers */,
 				72EE17FB26D1CC8800C58B19 /* SUInstallerLauncher+Private.h in Headers */,
 				61299A5C09CA6D4500B7442F /* SUConstants.h in Headers */,
@@ -3600,6 +3615,7 @@
 			files = (
 				723ABF31259D062F00BDB4FA /* SULegacyWebView.m in Sources */,
 				72B767E71C9CFD7200A07552 /* SPUAutomaticUpdateDriver.m in Sources */,
+				C82AA8D329F9CDC000989E7B /* SessionConfig.m in Sources */,
 				72B767D71C9C8B5C00A07552 /* SPUBasicUpdateDriver.m in Sources */,
 				72B767E31C9CE90A00A07552 /* SPUCoreBasedUpdateDriver.m in Sources */,
 				72F9EC451D5E9ED8004AC8B6 /* SPUDownloadData.m in Sources */,
