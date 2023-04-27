@@ -8,9 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-#import <Foundation/Foundation.h>
-
-@interface SessionConfig : NSObject
+@interface SPSessionConfig : NSObject
 
 @property (nonatomic, strong, readonly) NSURLSessionConfiguration *sessionConfig;
 

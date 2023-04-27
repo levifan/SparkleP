@@ -90,6 +90,8 @@ SU_EXPORT @interface SPUStandardUpdaterController : NSObject
  */
 - (instancetype)initWithStartingUpdater:(BOOL)startUpdater updaterDelegate:(nullable id<SPUUpdaterDelegate>)updaterDelegate userDriverDelegate:(nullable id<SPUStandardUserDriverDelegate>)userDriverDelegate;
 
+- (instancetype)initWithStartingUpdater:(BOOL)startUpdater updaterDelegate:(nullable id<SPUUpdaterDelegate>)theUpdaterDelegate userDriverDelegate:(nullable id<SPUStandardUserDriverDelegate>)theUserDriverDelegate sessionConfig:(nullable NSURLSessionConfiguration *)theSessionConfig;
+
 /**
  Starts the updater if it has not already been started.
  

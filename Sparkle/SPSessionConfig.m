@@ -6,21 +6,17 @@
 //  Copyright © 2023 Sparkle Project. All rights reserved.
 //
 
-#import "SessionConfig.h"
+#import "SPSessionConfig.h"
 
-@interface SessionConfig ()
+@implementation SPSessionConfig
 
-@property (nonatomic, strong, readwrite) NSURLSessionConfiguration *sessionConfig;
-
-@end
-
-@implementation SessionConfig
+@synthesize sessionConfig = _sessionConfig;
 
 + (instancetype)sharedInstance {
-    static SessionConfig *sharedInstance = nil;
+    static SPSessionConfig *sharedInstance = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        sharedInstance = [[SessionConfig alloc] initPrivate];
+        sharedInstance = [[SPSessionConfig alloc] initPrivate];
     });
     return sharedInstance;
 }

@@ -12,7 +12,7 @@
 #import "SPUDownloadData.h"
 #import "SPUDownloadDataPrivate.h"
 #import "SUErrors.h"
-#import "SessionConfig.h"
+#import "SPSessionConfig.h"
 
 #include "AppKitPrevention.h"
 
@@ -56,7 +56,7 @@ static NSString *SUDownloadingReason = @"Downloading update related file";
 - (void)startDownloadWithRequest:(NSURLRequest *)request SPU_OBJC_DIRECT
 {
     _downloadSession = [NSURLSession
-        sessionWithConfiguration:[SessionConfig sharedInstance].sessionConfig
+        sessionWithConfiguration:[SPSessionConfig sharedInstance].sessionConfig
         delegate:self
         delegateQueue:[NSOperationQueue mainQueue]];
     _download = [_downloadSession downloadTaskWithRequest:request];

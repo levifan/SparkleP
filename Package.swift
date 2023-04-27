@@ -5,7 +5,7 @@ import PackageDescription
 let version = "2.4.1"
 // Tag is required to point towards the right asset. SPM requires the tag to follow semantic versioning to be able to resolve it.
 let tag = "2.4.1"
-let checksum = "cd30071147273eb0f1ef82e2cf4fd2c35680831e9fca42778a7b092b015b8711"
+let checksum = "5746f68ca7d9bbaf34b67a2ec1e552fe7dd4db616876b094f66005e63be0acfe"
 let url = "https://github.com/sparkle-project/Sparkle/releases/download/\(tag)/Sparkle-for-Swift-Package-Manager.zip"
 
 let package = Package(

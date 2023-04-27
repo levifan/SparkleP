@@ -15,8 +15,9 @@
 #import "SUConstants.h"
 #import "SULog.h"
 #import "SULocalizations.h"
-#import <AppKit/AppKit.h>
+#import "SPSessionConfig.h"
 
+#import <AppKit/AppKit.h>
 // We use public instance variables instead of properties for the updater / user driver delegates
 // because we want them to be connectable outlets from Interface Builder, but we do not want their setters to be invoked
 // programmatically.
@@ -28,6 +29,8 @@
 
 @synthesize updater = _updater;
 @synthesize userDriver = _userDriver;
+
+SPSessionConfig *config;
 
 - (void)awakeFromNib
 {
@@ -56,7 +59,17 @@
 
 - (instancetype)initWithStartingUpdater:(BOOL)startUpdater updaterDelegate:(nullable id<SPUUpdaterDelegate>)theUpdaterDelegate userDriverDelegate:(nullable id<SPUStandardUserDriverDelegate>)theUserDriverDelegate
 {
+    return [self initWithStartingUpdater:startUpdater updaterDelegate:theUpdaterDelegate userDriverDelegate:theUserDriverDelegate sessionConfig:nil];
+}
+
+
+- (instancetype)initWithStartingUpdater:(BOOL)startUpdater updaterDelegate:(nullable id<SPUUpdaterDelegate>)theUpdaterDelegate userDriverDelegate:(nullable id<SPUStandardUserDriverDelegate>)theUserDriverDelegate sessionConfig:(nullable NSURLSessionConfiguration *)theSessionConfig
+{
     if ((self = [super init])) {
+        if (theSessionConfig != nil) {
+            config = [[SPSessionConfig sharedInstance] initWithConfiguration:theSessionConfig];
+        }
+        
         self->updaterDelegate = theUpdaterDelegate;
         self->userDriverDelegate = theUserDriverDelegate;
 
